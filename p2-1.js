@@ -17,7 +17,7 @@ const output=data.filter((d)=>{
         return true;
 })
 
-console.log(output);
+//console.log(output);
 
 
 // 2. Split their IP address into their components eg. 111.139.161.143 has components [111, 139, 161, 143]
@@ -26,22 +26,31 @@ const output1=data.map((d)=>{
     let ip=d.ip_address.split(".");
     return ip;
 })
-console.log(output1);
+//console.log(output1);
 
 
 // 3. Find the sum of all the second components of the ip addresses.
 
-const output2=data.filter((d)=>{
-    return d.email.endsWith('.org');
-})
-console.log(output2);
 
 // 3. Find the sum of all the fourth components of the ip addresses.
 // 4. Compute the full name of each person and store it in a new key (full_name or something) for each person.
 // 5. Filter out all the .org emails
-
+const output4=data.filter((d)=>{
+    return d.email.endsWith('.org');
+})
+//console.log(output2);
 
 // 6. Calculate how many .org, .au, .com emails are there
+let count=0;
+data.filter((d)=>{
+   
+    if(d.email.endsWith('.org')||d.email.endsWith('.au')||d.email.endsWith('.com')){
+        count++;
+    }
+})
+console.log(count);
+
+
 
 // 7. Sort the data in descending order of first name
 
@@ -49,4 +58,4 @@ const output6=data.sort(function(a, b) {
     return b.first_name - a.first_name;
 });
 
-console.log(output6);
+//console.log(output6);
