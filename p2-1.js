@@ -17,12 +17,16 @@ const output=data.filter((d)=>{
         return true;
 })
 
-console.log(output)
+console.log(output);
 
 
 // 2. Split their IP address into their components eg. 111.139.161.143 has components [111, 139, 161, 143]
 
-
+const output1=data.map((d)=>{
+    let ip=d.ip_address.split(".");
+    return ip;
+})
+console.log(output1);
 
 
 
